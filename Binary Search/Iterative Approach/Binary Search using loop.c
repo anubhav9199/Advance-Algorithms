@@ -42,7 +42,7 @@ int main()
     scanf("%d", &x);
 
     // Calling Binary Search Function
-    result = binarySearch(arr,x,low,n);
+    result = binarySearch(arr,x,low,n-1);
     if (result == -1)
     {
         printf("\nElement is not found in array");

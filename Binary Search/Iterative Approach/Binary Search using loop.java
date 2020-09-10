@@ -29,7 +29,7 @@ public class BinarySearch {
 		x = s.nextInt();   
 		
 		// Calling Binary Search Function and giving result
-		result = binary_s earch(arr,x,low,n);
+		result = binary_s earch(arr,x,low,n-1);
 		if (result == -1){
 			System.out.println("Element is not found in array")
 		}

@@ -2,9 +2,9 @@
 
 int binarySearch(int arr[], int x, int low, int high)
 {
-    if(high == 1)
+    if(high >= low)
     {
-        int mid = (low + (high - 1))/2;
+        int mid = (low + (high - low))/2;
         if (arr[mid] == x)
         {
             return mid;
@@ -44,7 +44,7 @@ int main()
     scanf("%d", &x);
 
     // Calling Binary Search Function
-    result = binarySearch(arr,x,low,n);
+    result = binarySearch(arr,x,low,n-1);
     if (result == -1)
     {
         printf("\nElement is not found in array");

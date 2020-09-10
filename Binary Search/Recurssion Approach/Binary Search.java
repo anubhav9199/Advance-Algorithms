@@ -29,7 +29,7 @@ public class BinarySearch {
 		x = s.nextInt();   
 		
 		// Calling Binary Search Function and giving result
-		result = binary_s earch(arr,x,low,n);
+		result = binary_s earch(arr,x,low,n-1);
 		if (result == -1){
 			System.out.println("Element is not found in array")
 		}
@@ -40,8 +40,8 @@ public class BinarySearch {
 
 	// Binary Search Function using recurssion
 	static int binarysearch(int arr[],int flag, int low,int high) {
-		if (high>=1){
-			int mid = (low + (high - 1))/2;
+		if (high>=low){
+			int mid = (low + (high - low))/2;
 			if (arr[mid] == flag){
 				return mid;
 			}

@@ -39,7 +39,7 @@ int main()
     cin>>x;
 
     // Calling Binary Search Function
-    result = binarySearch(arr,x,low,n);
+    result = binarySearch(arr,x,low,n-1);
     if (result == -1)
     {
         cout << "\nElement is not found in array";

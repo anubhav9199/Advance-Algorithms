@@ -1,7 +1,7 @@
 # Defining Binary Search function
 def binary_search(arr, x, low, high):
     while low <= high:
-        mid = (low + (high - low))/2
+        mid = (low + (high - low))//2
         if arr[mid] == x :
             return mid
         elif arr[mid] > x :
@@ -20,7 +20,7 @@ def main():
     high = n
     
     arr = list()
-    while n < 0:
+    while n > 0:
         a = int(input("\nEnter the element : "))
         arr.append(a)
         n = n - 1
@@ -28,7 +28,7 @@ def main():
     x = int(input("\nEnter the element want to search : "))
 
     # Calling Binary Search Function
-    result = binary_search(arr,x,0,high)
+    result = binary_search(arr,x,0,high-1)
     if result == -1:
         print("\nElement is not found in array")
     else:
